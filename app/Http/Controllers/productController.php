@@ -15,10 +15,10 @@ class productController extends Controller
     }
 
     public function store(Request $rq){
-        $data = $rq->validate{[
+        $data = $rq->validate([
             'name'=>'required',
             'qty'=>'required|numeric',
-            ]};
+            ]);
 
         $newProduct = Product::create($data);//store in database
 
