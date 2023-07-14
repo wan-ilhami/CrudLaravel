@@ -15,12 +15,14 @@ class productController extends Controller
     }
 
     public function store(Request $rq){
+        //store in array to post
         $data = $rq->validate([
             'name'=>'required',
             'qty'=>'required|numeric',
             ]);
 
-        $newProduct = Product::create($data);//store in database
+        //store in database
+        $newProduct = Product::create($data);
 
         return redirect(route('product.index'));
     }
