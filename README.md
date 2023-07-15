@@ -64,3 +64,11 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+## How to install
+
+1. Installing Xampp at (https://www.apachefriends.org/download.html). You can download it here. And installing PHP at (https://www.php.net/downloads.php)
+2. After installation oh PHP and Xampp. You can download the source code in my github.
+3. to run the source code, use the command 'php artisan serve' in terminal.
+4. Go to [http://127.0.0.1:8000/product] to view the CRUD.
