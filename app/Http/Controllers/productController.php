@@ -8,7 +8,8 @@ use App\Models\products;
 class productController extends Controller
 {
     public function index(){
-        return view('products.index');
+        $products = products::all();//to show all product in database into website
+        return view('products.index', ['products' => $products]);
     }
 
     public function create(){
