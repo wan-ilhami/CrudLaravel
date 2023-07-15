@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\products;
 
 class productController extends Controller
 {
@@ -22,7 +23,7 @@ class productController extends Controller
             ]);
 
         //store in database
-        $newProduct = Product::create($data);
+        $newProduct = products::create($data);
 
         return redirect(route('product.index'));
     }
