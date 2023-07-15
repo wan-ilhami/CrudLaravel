@@ -28,4 +28,25 @@ class productController extends Controller
 
         return redirect(route('product.index'));
     }
+
+    public function edit(products $product){
+        return view('products.edit', ['product' => $product]);
+    }
+    
+    public function update(products $product, Request $request){
+        $data = $request->validate([
+            'name' => 'required',
+            'qty' => 'required|numeric',
+        ]);
+
+        $product->update($data);
+
+        return redirect(route('product.index'))->with('success', 'Product Updated Succesffully');
+
+    }
+
+    public function destroy(products $product){
+        $product->delete();
+        return redirect(route('product.index'))->with('success', 'Product deleted Succesffully');
+    }
 }
